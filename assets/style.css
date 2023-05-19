@@ -1,0 +1,142 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+    scroll-behavior: smooth;
+    font-family: roboto;
+}
+
+html {
+    overflow-x: hidden;
+    font-size:62.5%;
+}
+
+#section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(16, 16, 16);
+}
+
+#input-div {
+    display: flex;
+    flex-direction: column;
+    width: 45vw;
+    max-width: 600px;
+    gap: 2rem;
+}
+
+input, button {
+    font-size: 2.5rem;
+    padding: 2rem 2rem;
+    border-radius: 3rem;
+    border: 1px solid pink;
+    transition: 0.7s ease-in-out all;
+    font-weight: 300;
+}
+
+input:focus {
+    outline: 0;
+    box-shadow: 0px 0px 80px rgba(255, 255, 255, 0.277);
+    transition: 0.7s ease-in-out all;
+}
+
+.coolBeans {
+  border: 2px solid currentColor;
+  border-radius: 3rem;
+  color: #ff0;
+  font-family: roboto;
+  font-size: 4rem;
+  font-weight: 100;
+  overflow: hidden;
+  padding: 1rem 2rem;
+  position: relative;
+  text-decoration: none;
+  transition: 0.7s transform ease-in-out;
+  will-change: transform;
+  z-index: 0;
+  background-color: black;
+  cursor: pointer;
+}
+.coolBeans::after {
+  background-color: #ff0;
+  border-radius: 3rem;
+  content: '';
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-100%, 0) rotate(10deg);
+  transform-origin: top left;
+  transition: 0.5s transform ease-out;
+  will-change: transform;
+  z-index: -1;
+}
+.coolBeans:hover::after {
+  transform: translate(0, 0);
+}
+.coolBeans:hover {
+  border: 2px solid transparent;
+  color: #1c1c1c;
+  transform: scale(1.05);
+  will-change: transform;
+}
+
+#output {
+    background-color: rgb(54, 54, 54);
+    color: rgb(255, 255, 255);
+    padding: 2rem 2rem;
+    border-radius: 3rem;
+    font-weight: 100;
+    font-size: 2rem;
+}
+
+#myModal, #infoModal {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  background-color: #050505b0;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  font-weight: 600;
+  top: 0;
+  font-size: 5rem;
+  color: white;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  padding-top: 10vh;
+  align-items: center;
+  transition: 0.4s all ease;
+  display: flex;
+  padding: 5rem;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+
+#tomorsecode {
+  max-width: 300px;
+  min-width: 200px;
+  width: 100%;
+}
+
+#showlist {
+  max-width: 100px;
+  min-width: 50px;
+  width: 30%;
+}
+
+.btn-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#close {
+  display: block;
+}
